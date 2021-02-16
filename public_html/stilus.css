@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+main, header,article, aside, footer {
+    border: 1px solid grey;
+    padding:10px;
+    margin:2px;
+    
+}
+* {
+    box-sizing:border-box;
+}
+main {
+    max-width:800px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    /*gap:2px;*/
+   background-color:darkolivegreen;
+}
+
+header {
+    flex:0 0 calc(100% - 4px);
+    order:0;
+    background-color:#9d9d64;
+    
+}
+
+article {
+    flex:4 0 calc(50% - 4px);
+    order:2;
+    
+}
+
+#bal {
+    flex:1 0 calc(25% - 4px);
+    order:1;
+}
+
+#jobb {
+    flex:1 0 calc(25% - 4px);
+    order:3;
+    
+}
+
+footer {
+    flex:0 0 calc(100% - 4px);
+    order:4;
+    
+}
+
+
+
+body {
+    background-image: url("hatter.jpg");
+    color:white;
+    text-align:justify;
+}
+
+article div img {
+    width:100%;
+}
+
+/*galeria kialakítása*/
+
+article {
+    display:flex;
+}
+
+article div {
+    width:33.333%;
+}
+header nav {
+    
+}
+header nav ul{
+    display:flex;
+    list-style-type:none;
+    
+   
+    
+}
+
+header nav li {
+    margin:5px;
+}
+
+header nav a {
+    text-decoration:none;
+    color:darkkhaki;
+}
+
+@media screen and (max-width: 700px) {
+    main, header,article, aside, footer {
+        margin:0;
+    }
+    article {
+       order:1;
+       flex:0 0 100%;
+    }
+    
+    #jobb, #bal {
+       flex:0 0 100%; 
+    }
+    header nav ul {
+        flex-direction:column;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    article {
+        flex-direction:column;
+    }
+    
+    article div {
+        width:100%;
+    }
+}
